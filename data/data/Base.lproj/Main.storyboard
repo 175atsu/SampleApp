@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="data" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="REQ-v4-fgR">
+                                <rect key="frame" x="112" y="304" width="190" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="T5H-mZ-3nd"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.90588235289999997" green="0.3294117647" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQv-Ls-r6G">
+                                <rect key="frame" x="184" y="436" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1x-VC-1Ds"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91c-6D-gTx">
+                                <rect key="frame" x="186" y="227" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HX-19-065">
+                                <rect key="frame" x="184" y="557" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="reeset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pg4-JF-lBx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="91c-6D-gTx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="183" id="0Gl-rA-7f4"/>
+                            <constraint firstItem="REQ-v4-fgR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="MAh-NE-89z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="REQ-v4-fgR" secondAttribute="trailing" constant="92" id="V3A-Nj-fvP"/>
+                            <constraint firstItem="91c-6D-gTx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xfl-53-vS2"/>
+                            <constraint firstItem="6HX-19-065" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xke-Yy-g98"/>
+                            <constraint firstItem="REQ-v4-fgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jvF-Hf-aQO"/>
+                            <constraint firstItem="bQv-Ls-r6G" firstAttribute="top" secondItem="REQ-v4-fgR" secondAttribute="bottom" constant="112" id="lZr-2e-V36"/>
+                            <constraint firstItem="bQv-Ls-r6G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="px7-nJ-vlG"/>
+                            <constraint firstItem="6HX-19-065" firstAttribute="top" secondItem="bQv-Ls-r6G" secondAttribute="bottom" constant="91" id="uOQ-S5-LzY"/>
+                            <constraint firstItem="REQ-v4-fgR" firstAttribute="top" secondItem="91c-6D-gTx" secondAttribute="bottom" constant="56" id="zuU-3T-MQS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressview" destination="REQ-v4-fgR" id="F8R-aS-m9c"/>
+                        <outlet property="resetname" destination="6HX-19-065" id="Evw-4g-bpL"/>
+                        <outlet property="shintyoku" destination="91c-6D-gTx" id="2dx-Dp-39s"/>
+                        <outlet property="tapname" destination="bQv-Ls-r6G" id="k84-Md-lRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
