@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -65,6 +66,22 @@ class ViewController: UIViewController {
                 }
             }
         }
+
+        let avDevice = AVCaptureDevice.default(for: AVMediaType.video)
+        guard let device = avDevice else {
+            return
+        }
+        if device.hasTorch {
+            let torchOn = !device.isTorchActive
+            do {
+                try device.lockForConfiguration()
+            } catch {
+                return
+            }
+            device.torchMode = torchOn ? .on : .off
+            device.unlockForConfiguration()
+        }
+
     }
     
     
